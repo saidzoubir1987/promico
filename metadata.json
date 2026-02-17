@@ -1,0 +1,5 @@
+{
+  "name": "Subscription Manager",
+  "description": "A web application for managing customer subscriptions. It operates entirely on the client-side, using LocalStorage for data persistence, and is designed to be deployed on static hosting services like GitHub Pages.",
+  "requestFramePermissions": []
+}
