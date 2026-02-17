@@ -1,10 +1,10 @@
 
 import React, { useState } from 'react';
-import { Customer } from '../types.ts';
-import DeviceRow from './DeviceRow.tsx';
-import { ChevronDownIcon } from './icons/ChevronDownIcon.tsx';
-import { PencilIcon } from './icons/PencilIcon.tsx';
-import { TrashIcon } from './icons/TrashIcon.tsx';
+import { Customer } from '../types';
+import DeviceRow from './DeviceRow';
+import { ChevronDownIcon } from './icons/ChevronDownIcon';
+import { PencilIcon } from './icons/PencilIcon';
+import { TrashIcon } from './icons/TrashIcon';
 
 interface CustomerCardProps {
   customer: Customer;

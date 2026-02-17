@@ -1,7 +1,8 @@
+
 import React, { useState, useEffect } from 'react';
-import { Customer, Device } from '../types.ts';
-import { PlusIcon } from './icons/PlusIcon.tsx';
-import { TrashIcon } from './icons/TrashIcon.tsx';
+import { Customer, Device } from '../types';
+import { PlusIcon } from './icons/PlusIcon';
+import { TrashIcon } from './icons/TrashIcon';
 
 interface CustomerFormModalProps {
   customer: Customer | null;
@@ -130,7 +131,6 @@ const CustomerFormModal: React.FC<CustomerFormModalProps> = ({ customer, onClose
             <button type="submit" className="px-4 py-2 rounded-lg bg-indigo-600 text-white hover:bg-indigo-700 transition-colors">حفظ</button>
           </div>
         </form>
-        {/* FIX: The inline <style> tag was causing TypeScript parsing errors because the CSS content was being misinterpreted as JS. Using `dangerouslySetInnerHTML` ensures the content is treated as a raw string, resolving these errors. */}
         <style
           dangerouslySetInnerHTML={{
             __html: `

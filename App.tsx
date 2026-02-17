@@ -1,13 +1,13 @@
 
 import React, { useState, useMemo, useEffect } from 'react';
-import { Customer, Device, SubscriptionStatus } from './types.ts';
-import useLocalStorage from './hooks/useLocalStorage.ts';
-import Header from './components/Header.tsx';
-import Dashboard from './components/Dashboard.tsx';
-import CustomerList from './components/CustomerList.tsx';
-import CustomerFormModal from './components/CustomerFormModal.tsx';
-import { PlusIcon } from './components/icons/PlusIcon.tsx';
-import { initialData } from './constants.ts';
+import { Customer, Device, SubscriptionStatus } from './types';
+import useLocalStorage from './hooks/useLocalStorage';
+import Header from './components/Header';
+import Dashboard from './components/Dashboard';
+import CustomerList from './components/CustomerList';
+import CustomerFormModal from './components/CustomerFormModal';
+import { PlusIcon } from './components/icons/PlusIcon';
+import { initialData } from './constants';
 
 const App: React.FC = () => {
   const [customers, setCustomers] = useLocalStorage<Customer[]>('customers', []);

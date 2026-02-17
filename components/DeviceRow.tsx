@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { Device, SubscriptionStatus } from '../types.ts';
+import { Device, SubscriptionStatus } from '../types';
 
 interface DeviceRowProps {
   device: Device;

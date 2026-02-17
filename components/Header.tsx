@@ -1,7 +1,7 @@
 
 import React from 'react';
-import { SunIcon } from './icons/SunIcon.tsx';
-import { MoonIcon } from './icons/MoonIcon.tsx';
+import { SunIcon } from './icons/SunIcon';
+import { MoonIcon } from './icons/MoonIcon';
 
 interface HeaderProps {
   theme: 'light' | 'dark';

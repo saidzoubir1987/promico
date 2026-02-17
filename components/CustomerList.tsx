@@ -1,9 +1,9 @@
 
 import React, { useState, useMemo } from 'react';
-import { Customer, SubscriptionStatus } from '../types.ts';
-import CustomerCard from './CustomerCard.tsx';
-import { SearchIcon } from './icons/SearchIcon.tsx';
-import { DownloadIcon } from './icons/DownloadIcon.tsx';
+import { Customer, SubscriptionStatus } from '../types';
+import CustomerCard from './CustomerCard';
+import { SearchIcon } from './icons/SearchIcon';
+import { DownloadIcon } from './icons/DownloadIcon';
 
 interface CustomerListProps {
   customers: Customer[];

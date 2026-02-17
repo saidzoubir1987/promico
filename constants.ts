@@ -1,5 +1,5 @@
 
-import { Customer } from './types.ts';
+import { Customer } from './types';
 
 const today = new Date();
 const addDays = (date: Date, days: number): Date => {
