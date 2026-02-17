@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import { Customer, Device } from '../types';
-import { PlusIcon } from './icons/PlusIcon';
-import { TrashIcon } from './icons/TrashIcon';
+import { Customer, Device } from '../types.ts';
+import { PlusIcon } from './icons/PlusIcon.tsx';
+import { TrashIcon } from './icons/TrashIcon.tsx';
 
 interface CustomerFormModalProps {
   customer: Customer | null;
@@ -130,14 +130,15 @@ const CustomerFormModal: React.FC<CustomerFormModalProps> = ({ customer, onClose
             <button type="submit" className="px-4 py-2 rounded-lg bg-indigo-600 text-white hover:bg-indigo-700 transition-colors">حفظ</button>
           </div>
         </form>
-        {/* FIX: Removed invalid `jsx` prop from `<style>` tag, which is not a standard React feature and caused a type error. Merged styles into a single block for clarity. */}
-        <style>{`
+        {/* FIX: The inline <style> tag was causing TypeScript parsing errors because the CSS content was being misinterpreted as JS. Using `dangerouslySetInnerHTML` ensures the content is treated as a raw string, resolving these errors. */}
+        <style
+          dangerouslySetInnerHTML={{
+            __html: `
             .form-input {
                 width: 100%;
                 padding: 0.5rem 0.75rem;
                 border-radius: 0.5rem;
-                border: 1px solid;
-                border-color: #d1d5db; /* coolGray-300 */
+                border: 1px solid #d1d5db; /* coolGray-300 */
                 background-color: #ffffff; /* white */
             }
             .dark .form-input {
@@ -152,7 +153,9 @@ const CustomerFormModal: React.FC<CustomerFormModalProps> = ({ customer, onClose
                 --tw-ring-shadow: var(--tw-ring-inset) 0 0 0 calc(2px + var(--tw-ring-offset-width)) var(--tw-ring-color);
                 box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000);
             }
-        `}</style>
+        `,
+          }}
+        />
       </div>
     </div>
   );

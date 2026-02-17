@@ -1,10 +1,10 @@
 
 import React, { useMemo } from 'react';
-import { Customer, SubscriptionStatus } from '../types';
-import { UserIcon } from './icons/UserIcon';
-import { CheckCircleIcon } from './icons/CheckCircleIcon';
-import { ExclamationTriangleIcon } from './icons/ExclamationTriangleIcon';
-import { XCircleIcon } from './icons/XCircleIcon';
+import { Customer, SubscriptionStatus } from '../types.ts';
+import { UserIcon } from './icons/UserIcon.tsx';
+import { CheckCircleIcon } from './icons/CheckCircleIcon.tsx';
+import { ExclamationTriangleIcon } from './icons/ExclamationTriangleIcon.tsx';
+import { XCircleIcon } from './icons/XCircleIcon.tsx';
 
 interface DashboardProps {
   customers: Customer[];
